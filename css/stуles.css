@@ -368,6 +368,8 @@ li {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  fill: currentColor;
+  transition: color 3000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-link {
@@ -378,8 +380,6 @@ li {
 .social-icons-link:focus {
   background-color: var(--web-color);
   color: var(--title-color);
-  transition-delay: 250ms;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-svg-comando {
