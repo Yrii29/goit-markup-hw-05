@@ -94,9 +94,23 @@ li {
 
 .list {
   text-decoration: none;
-  color: #212121;
+  color: var(--main-br-color);
   font-weight: 500;
   font-size: 14px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emphasis {
+  color: var(--web-color);
+}
+
+.emphasis::after {
+  display: block;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--web-color);
+  border-radius: 2px;
 }
 
 .list:hover,
@@ -124,6 +138,7 @@ li {
   font-size: 14px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adrec-icons-svg {
@@ -369,7 +384,8 @@ li {
   height: 44px;
   border-radius: 50%;
   fill: currentColor;
-  transition: color 3000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-link {
@@ -424,6 +440,8 @@ li {
   border: 1px solid rgba(175, 177, 184, 1);
   cursor: pointer;
   color: #afb1b8;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icons-link:focus,
@@ -512,6 +530,7 @@ li {
   justify-content: center;
   width: 44px;
   height: 44px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icons-link:focus,
@@ -580,6 +599,9 @@ li {
   font-weight: 500;
   font-size: 16px;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:hover,
@@ -616,6 +638,22 @@ button:focus {
 .function-portfolio-adres {
   display: block;
   text-decoration: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curtains {
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.curtains-text {
+  color: var(--title-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+
+  letter-spacing: 0.03em;
 }
 
 .function-portfolio-adres:hover,
