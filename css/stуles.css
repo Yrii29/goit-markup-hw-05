@@ -102,12 +102,15 @@ li {
 
 .emphasis {
   color: var(--web-color);
+  position: relative;
 }
 
 .emphasis::after {
+  position: absolute;
   display: block;
   content: '';
   height: 4px;
+  top: 42px;
   width: 100%;
   background-color: var(--web-color);
   border-radius: 2px;
@@ -643,6 +646,8 @@ button:focus {
 
 .curtains {
   background: rgba(33, 150, 243, 0.9);
+  position: relative;
+  overflow: hidden;
 }
 
 .curtains-text {
@@ -652,8 +657,15 @@ button:focus {
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
-
+  position: absolute;
   letter-spacing: 0.03em;
+  transform: translateY(100%);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curtains-text:hover {
+  transform: translateY(0);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .function-portfolio-adres:hover,
